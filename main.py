@@ -1,24 +1,21 @@
-def is_suspicious(url):
-    # 1. URL too long
-    if len(url) > 75:
-        return "Suspicious (too long)"
-    
-    # 2. @ symbol is used
-    if "@" in url:
-        return "Suspicious (@ symbol used)"
-    
-    # 3. Hyphens (common in fake domains)
-    if "-" in url:
-        return "Suspicious (hyphens detected)"
-    
-    # 4. HTTP instead of HTTPS
-    if url.startswith("http://"):
-        return "Suspicious (no HTTPS)"
-    
-    # 5. If none triggered, looks safe
-    return "Looks Safe (basic checks)"
 
-# --- MAIN PROGRAM ---
-url = input("Enter URL to check: ")
-result = is_suspicious(url)
-print(result)
+from detector import is_suspicious
+
+print("Enter URLs to check, separated by commas:")
+urls_input = input()
+urls = [u.strip() for u in urls_input.split(",") if u.strip()]
+
+for url in urls:
+    print(f"\nChecking: {url}")
+    reasons = is_suspicious(url)
+    if reasons:
+        print("⚠️ POSSIBLE PHISHING DETECTED")
+        for r in reasons:
+            print(" -", r)
+        print("\nProbabliy Fishing attept:  Do not click on the link and report it if necessary.")
+        print("\nPlease be cautious and verify the URL before proceeding.")
+        print("\n")
+
+    else:
+        print("✅ URL LOOKS SAFE (basic checks)")
+        print("\n")
