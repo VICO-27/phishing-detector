@@ -93,25 +93,18 @@ Always verify URLs manually and use trusted cybersecurity tools.
 
 ## 🎯 Project Goals
 
-Learn basic phishing detection techniques
-
-Practice Python modular programming
-
-Understand common phishing patterns
-
-Build a foundation for more advanced cybersecurity projects
+  - Learn basic phishing detection techniques
+  - Practice Python modular programming
+  - Understand common phishing patterns
+  - Build a foundation for more advanced cybersecurity projects
 
 **🚀 Possible Improvements**
 
-Machine learning–based detection
-
-URL reputation checks
-
-Browser extension integration
-
-Logging and reporting system
-
-Real-time scanning
+  - Machine learning–based detection
+  - URL reputation checks
+  - Browser extension integration
+  - Logging and reporting system
+  - Real-time scanning
 
 ## 📜 License
 
